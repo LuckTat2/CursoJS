@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Nacionalidade</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    Digite seu País <input type="text" id="pais" required>
+    <input type="button" value="Enviar" onclick="enviar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function enviar(){
+            var nasc = document.getElementById("pais").value.toUpperCase();
+            var resp = document.getElementById("res")
+            resp.innerText = "Seu País é "+nasc+".";
+            if (nasc==="BRASIL"){
+                resp.innerText += "Você é Brasileiro"
+            } else {
+                resp.innerText += "Você é Estrangeiro"
+            }
+        }
+    </script>
+</body>
+</html>
